@@ -21,7 +21,7 @@ var livestatsCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(livestatsCmd)
+	dbCmd.AddCommand(livestatsCmd)
 
 	// Here you will define your flags and configuration settings.
 

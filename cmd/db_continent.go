@@ -10,10 +10,10 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// sportsCmd represents the sports command
-var sportsCmd = &cobra.Command{
-	Use:   "sports",
-	Short: "Sport clubs, people, magazines/news for given country",
+// continentCmd represents the continent command
+var continentCmd = &cobra.Command{
+	Use:   "continent",
+	Short: "List built-in world continents as usable for further drilldown",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
 
@@ -21,20 +21,20 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("sports called")
+		fmt.Println("continent called")
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(sportsCmd)
+	dbCmd.AddCommand(continentCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// sportsCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// continentCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// sportsCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// continentCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
